@@ -20,7 +20,7 @@ void setup() {
  smooth();
  myPort = new Serial(this,"COM5", 9600); // starts the serial communication
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'.
- orcFont = loadFont("OCRAExtended-30.vlw");
+orcFont = createFont("Arial", 30);
 }
 
 void draw() {
