@@ -18,7 +18,7 @@ void setup() {
   
  size (1920, 1080); // *** SCREEN RESOLUTION***
  smooth();
- myPort = new Serial(this,"COM4", 9600); // starts the serial communication
+ myPort = new Serial(this,"COM5", 9600); // starts the serial communication
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'.
  orcFont = loadFont("OCRAExtended-30.vlw");
 }
