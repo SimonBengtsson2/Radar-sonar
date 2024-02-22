@@ -3,7 +3,7 @@ import java.awt.event.KeyEvent; // imports library for reading the data from the
 import java.io.IOException;
 
 Serial myPort; // defines Object Serial
-// defubes variables
+// defines variables
 String angle="";
 String distance="";
 String data="";
@@ -23,7 +23,7 @@ void setup() {
 orcFont = createFont("Arial", 30);
 }
 
-void draw() {
+void draw() { //draws all other funktions
   
   fill(98,245,31);
   textFont(orcFont);
@@ -47,14 +47,14 @@ void serialEvent (Serial myPort) { // starts reading data from the Serial Port
   
   index1 = data.indexOf(","); // find the character ',' and puts it into the variable "index1"
   angle= data.substring(0, index1); // read the data from position "0" to position of the variable index1
-  distance= data.substring(index1+1, data.length()); // read the data from position "index1" to the end of the data pr thats the value of the distance
+  distance= data.substring(index1+1, data.length()); // read the data from position "index1"
   
   // converts the String variables into Integer
   iAngle = int(angle);
   iDistance = int(distance);
 }
-
-void drawRadar() {
+//drawing the radar 
+void drawRadar() {   
   pushMatrix();
   translate(width/2,height-height*0.074); // moves the starting coordinats to new location
   noFill();
@@ -76,7 +76,7 @@ void drawRadar() {
   popMatrix();
 }
 
-void drawObject() {
+void drawObject() { /draws the moving line
   pushMatrix();
   translate(width/2,height-height*0.074); // moves the starting coordinats to new location
   strokeWeight(9);
@@ -90,7 +90,7 @@ void drawObject() {
   popMatrix();
 }
 
-void drawLine() {
+void drawLine() { //draws the moving line
   pushMatrix();
   strokeWeight(9);
   stroke(30,250,60);
