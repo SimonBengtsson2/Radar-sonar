@@ -6,14 +6,14 @@ float pixsDistance1;
 int iAngle, iDistance1;
 PFont orcFont;
 float searchAngle = 0;
-color radarLineColor1 = color(30, 250, 60); // Initial color for radar line (sensor 1)
+color radarLineColor1 = color(30, 250, 60); // Initial color for radar line 
 
 void setup() {
   size(1200, 900);
   smooth();
-  myPort = new Serial(this, "COM5", 9600);
+  myPort = new Serial(this, "COM5", 9600); //start serial using com5
   myPort.bufferUntil('.');
-  orcFont = createFont("Arial", 30);
+  orcFont = createFont("Arial", 30); //create text font
 }
 
 void draw() {
@@ -31,7 +31,7 @@ void draw() {
   fill(98, 245, 31);
   drawRadar(centerX, centerY);
 
-  // Use the modified drawLine and drawObject functions
+  // Use the drawLine and drawObject functions
   drawObject(centerX, centerY);
   drawLine(centerX, centerY);
   
